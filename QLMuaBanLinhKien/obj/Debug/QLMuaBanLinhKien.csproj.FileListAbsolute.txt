@@ -1,0 +1,61 @@
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe.config
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.pdb
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.AssemblyReference.cache
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Form1.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Properties.Resources.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.GenerateResource.cache
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CoreCompileInputs.cache
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.exe
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.pdb
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\bin\Debug\Guna.UI2.dll
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.MenuQuanLy.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLTaiKhoan.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_ThongKe.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CopyComplete
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.MenuNhanVien.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLBanHang.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLKhachHang.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLNhapHang.resources
+E:\CHÍNH KHOÁ\Dự Án Phát Triển PM\Demo\QLMuaBanLinhKien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLTHongTinHang.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe.config
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.pdb
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\bin\Debug\Guna.UI2.dll
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.AssemblyReference.cache
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.SuggestedBindingRedirects.cache
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Form1.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Properties.Resources.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.MenuNhanVien.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.MenuQuanLy.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLBanHang.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLKhachHang.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLNhapHang.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLTaiKhoan.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLTHongTinHang.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_ThongKe.resources
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.GenerateResource.cache
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CoreCompileInputs.cache
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CopyComplete
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.exe
+E:\soure_code\C#\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.pdb
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe.config
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.pdb
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\bin\Debug\Guna.UI2.dll
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.AssemblyReference.cache
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Form1.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Properties.Resources.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.MenuNhanVien.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.MenuQuanLy.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLBanHang.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLKhachHang.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLNhapHang.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLTaiKhoan.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_QLTHongTinHang.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.UC_ThongKe.resources
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.GenerateResource.cache
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CoreCompileInputs.cache
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CopyComplete
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.exe
+C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.pdb
