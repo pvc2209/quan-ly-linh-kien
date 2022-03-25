@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E0E28874-F157-4179-83EC-9D492CAE76F0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>QLMuaBanLinhKien</RootNamespace>
     <AssemblyName>QLMuaBanLinhKien</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\DangNhapController.cs" />
+    <Compile Include="Controller\QLKhachHangController.cs" />
     <Compile Include="CuaHangLinhKienDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,7 +65,9 @@
       <DependentUpon>CuaHangLinhKienDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dal\Configs.cs" />
+    <Compile Include="Dal\KhachHangDAO.cs" />
     <Compile Include="Dal\TaiKhoanDAO.cs" />
+    <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="View\DangNhapView.cs">
       <SubType>Form</SubType>
