@@ -53,7 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\DangNhapController.cs" />
+    <Compile Include="Controller\QLHangController.cs" />
     <Compile Include="Controller\QLKhachHangController.cs" />
+    <Compile Include="Controller\QLNhapHangController.cs" />
     <Compile Include="CuaHangLinhKienDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,9 +67,14 @@
       <DependentUpon>CuaHangLinhKienDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dal\Config.cs" />
+    <Compile Include="Dal\HangDAO.cs" />
     <Compile Include="Dal\KhachHangDAO.cs" />
+    <Compile Include="Dal\PhieuNhapDAO.cs" />
     <Compile Include="Dal\TaiKhoanDAO.cs" />
+    <Compile Include="Model\ChiTietPhieuNhap.cs" />
+    <Compile Include="Model\Hang.cs" />
     <Compile Include="Model\KhachHang.cs" />
+    <Compile Include="Model\PhieuNhap.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="View\DangNhapView.cs">
       <SubType>Form</SubType>
@@ -113,11 +120,11 @@
     <Compile Include="View\QLTaiKhoanView.Designer.cs">
       <DependentUpon>QLTaiKhoanView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\QLThongTinHangView.cs">
+    <Compile Include="View\QLHangView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\QLThongTinHangView.Designer.cs">
-      <DependentUpon>QLThongTinHangView.cs</DependentUpon>
+    <Compile Include="View\QLHangView.Designer.cs">
+      <DependentUpon>QLHangView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ThongKeView.cs">
       <SubType>UserControl</SubType>
@@ -155,8 +162,8 @@
     <EmbeddedResource Include="View\QLTaiKhoanView.resx">
       <DependentUpon>QLTaiKhoanView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\QLThongTinHangView.resx">
-      <DependentUpon>QLThongTinHangView.cs</DependentUpon>
+    <EmbeddedResource Include="View\QLHangView.resx">
+      <DependentUpon>QLHangView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ThongKeView.resx">
       <DependentUpon>ThongKeView.cs</DependentUpon>

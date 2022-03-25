@@ -20,12 +20,12 @@ namespace QLMuaBanLinhKien
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            TaiKhoan fake = new TaiKhoan();
-            fake.HoTen = "Faker";
-            fake.SoDienThoai = "0000000";
+            //TaiKhoan fake = new TaiKhoan();
+            //fake.HoTen = "Faker";
+            //fake.SoDienThoai = "0000000";
 
-            //Application.Run(new DangNhapView());
-            Application.Run(new NhanVienView(fake));
+            Application.Run(new DangNhapView());
+            //Application.Run(new NhanVienView(fake));
         }
     }
 }

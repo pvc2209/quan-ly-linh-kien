@@ -1,4 +1,5 @@
 ﻿
+using QLMuaBanLinhKien.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,59 +14,61 @@ namespace QLMuaBanLinhKien.Views
 {
     public partial class QLNhapHangView : UserControl
     {
-        
-        public QLNhapHangView()
+        private int _maNhanVien;
+        private QLNhapHangController _qlNhapHangController;
+        public QLNhapHangView(int maNhanVien)
         {
             InitializeComponent();
+
+            _qlNhapHangController = new QLNhapHangController(this);
+
+            _maNhanVien = maNhanVien;
         }
 
-        private void UC_QLNhapHang_Load(object sender, EventArgs e)
+        private void QLNhapHangView_Load(object sender, EventArgs e)
         {
-            
+            _qlNhapHangController.LoadDanhSachPhieuNhap();
         }
 
-        
-
-        private void btnThemHang_Click(object sender, EventArgs e)
+        public void HienThiDanhSachPhieuNhap(DataTable dataTable)
         {
-            
-            
+            dgvPhieuNhap.DataSource = dataTable;
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        public void HienThiDanhSachChiTietPhieuNhap(DataTable dataTable)
         {
-            
-            
-        }
-
-        private void btnTao_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnIn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-          
+            dgvHang.DataSource = dataTable;
         }
 
         private void dgvPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            txtMaPhieuNhap.Text = dgvPhieuNhap.CurrentRow.Cells[0].Value.ToString();
+            dtpNgayTao.Value = (DateTime)dgvPhieuNhap.CurrentRow.Cells[1].Value;
+            txtMaNhanVien.Text = dgvPhieuNhap.CurrentRow.Cells[2].Value.ToString();
+
+            _qlNhapHangController.LoadDanhSachChiTietPhieuNhap(txtMaPhieuNhap.Text);
         }
 
-        private void edtMaHang_TextChanged(object sender, EventArgs e)
+        private void btnTao_Click(object sender, EventArgs e)
         {
-            
+            string ngayTao = dtpNgayTao.Value.ToString("yyyy/MM/dd");
+
+            _qlNhapHangController.TaoPhieuNhap(ngayTao, _maNhanVien);
         }
 
-        private void groupBox4_Enter(object sender, EventArgs e)
+        public void ThongBao(string message)
         {
+            MessageBox.Show(message);
+        }
 
+        private void btnThemHang_Click(object sender, EventArgs e)
+        {
+            string maPhieuNhap = txtMaPhieuNhap.Text;
+            string maHang = txtMaHang.Text;
+            string soLuong = txtSoLuong.Text;
+            string giaNhap = txtGiaNhap.Text;
+
+            _qlNhapHangController.ThemChiTietPhieuNhap(maPhieuNhap, maHang, soLuong, giaNhap);
         }
     }
 }

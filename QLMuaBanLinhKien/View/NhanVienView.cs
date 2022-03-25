@@ -18,7 +18,7 @@ namespace QLMuaBanLinhKien.Views
         private QLKhachHangView _qlKhachHangView;
         private QLBanHangView _qlBanHangView;
         private QLNhapHangView _qlNhapHangView;
-        private QLThongTinHangView _qlThongTinHangView;
+        private QLHangView _qlThongTinHangView;
         
         public NhanVienView(TaiKhoan taiKhoan)
         {
@@ -26,15 +26,15 @@ namespace QLMuaBanLinhKien.Views
 
             _nhanVien = taiKhoan;
 
-            this.Text = $"Nhân Viên: {_nhanVien.HoTen} ({_nhanVien.SoDienThoai})";
+            this.Text = $"Nhân Viên: {_nhanVien.HoTen} - Mã nhân viên: {_nhanVien.MaTaiKhoan} ({_nhanVien.SoDienThoai})";
         }
 
         private void NhanVienView_Load(object sender, EventArgs e)
         {
             _qlKhachHangView = new QLKhachHangView();
             _qlBanHangView = new QLBanHangView();
-            _qlNhapHangView = new QLNhapHangView();
-            _qlThongTinHangView = new QLThongTinHangView();
+            _qlNhapHangView = new QLNhapHangView(_nhanVien.MaTaiKhoan);
+            _qlThongTinHangView = new QLHangView();
 
 
             addUseControl(_qlBanHangView);

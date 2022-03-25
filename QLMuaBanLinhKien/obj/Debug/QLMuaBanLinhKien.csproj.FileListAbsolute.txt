@@ -78,5 +78,5 @@ C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanL
 C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLBanHangView.resources
 C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLNhapHangView.resources
 C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLTaiKhoanView.resources
-C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLThongTinHangView.resources
 C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.ThongKeView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLHangView.resources

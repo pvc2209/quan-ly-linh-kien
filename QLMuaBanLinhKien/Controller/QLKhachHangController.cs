@@ -50,12 +50,12 @@ namespace QLMuaBanLinhKien.Controller
 
         public void SuaKhachHang(string maKhachHang, string hoTen, string diaChi, string soDienThoai, string email)
         {
-            try
+            if (CheckValid(hoTen, diaChi, soDienThoai, email))
             {
-                int ma = int.Parse(maKhachHang);
-
-                if (CheckValid(hoTen, diaChi, soDienThoai, email))
+                try
                 {
+                    int ma = int.Parse(maKhachHang);
+
                     KhachHangDAO khachHangDAO = new KhachHangDAO();
 
                     bool result = khachHangDAO.SuaKhachHang(new KhachHang(ma, hoTen, diaChi, soDienThoai, email));
@@ -70,11 +70,11 @@ namespace QLMuaBanLinhKien.Controller
                         _view.ThongBao("Sửa khách hàng thất bại!");
                     }
                 }
-            }
-            catch (FormatException)
-            {
-                _view.ThongBao("Mã khách hàng không hợp lệ!");
-                return;
+                catch (FormatException)
+                {
+                    _view.ThongBao("Mã khách hàng không hợp lệ!");
+                    return;
+                }
             }
         }
 

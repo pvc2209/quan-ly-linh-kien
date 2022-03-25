@@ -1,7 +1,7 @@
 ﻿
 namespace QLMuaBanLinhKien.Views
 {
-    partial class QLThongTinHangView
+    partial class QLHangView
     {
         /// <summary> 
         /// Required designer variable.
@@ -97,7 +97,7 @@ namespace QLMuaBanLinhKien.Views
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(31, 73);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(53, 17);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(48, 15);
             this.guna2HtmlLabel5.TabIndex = 8;
             this.guna2HtmlLabel5.Text = "Mã hàng:";
             // 
@@ -151,7 +151,7 @@ namespace QLMuaBanLinhKien.Views
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(38, 161);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(46, 17);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(43, 15);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Giá bán:";
             // 
@@ -161,7 +161,7 @@ namespace QLMuaBanLinhKien.Views
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(29, 117);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(55, 17);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(52, 15);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Tên hàng:";
             // 
@@ -179,6 +179,7 @@ namespace QLMuaBanLinhKien.Views
             this.btnXoa.Size = new System.Drawing.Size(84, 45);
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -194,6 +195,7 @@ namespace QLMuaBanLinhKien.Views
             this.btnSua.Size = new System.Drawing.Size(84, 45);
             this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -209,6 +211,7 @@ namespace QLMuaBanLinhKien.Views
             this.btnThem.Size = new System.Drawing.Size(84, 45);
             this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtTimKiem
             // 
@@ -246,6 +249,7 @@ namespace QLMuaBanLinhKien.Views
             this.btnTimKiem.Size = new System.Drawing.Size(82, 33);
             this.btnTimKiem.TabIndex = 16;
             this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // dgvHang
             // 
@@ -267,7 +271,7 @@ namespace QLMuaBanLinhKien.Views
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvHang.ColumnHeadersHeight = 4;
+            this.dgvHang.ColumnHeadersHeight = 24;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -297,7 +301,7 @@ namespace QLMuaBanLinhKien.Views
             this.dgvHang.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvHang.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvHang.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvHang.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvHang.ThemeStyle.HeaderStyle.Height = 24;
             this.dgvHang.ThemeStyle.ReadOnly = true;
             this.dgvHang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvHang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -306,20 +310,23 @@ namespace QLMuaBanLinhKien.Views
             this.dgvHang.ThemeStyle.RowsStyle.Height = 22;
             this.dgvHang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHang_CellClick);
             // 
             // rdMaHang
             // 
             this.rdMaHang.AutoSize = true;
+            this.rdMaHang.Checked = true;
             this.rdMaHang.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdMaHang.CheckedState.BorderThickness = 0;
             this.rdMaHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdMaHang.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdMaHang.CheckedState.InnerOffset = -4;
             this.rdMaHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.rdMaHang.Location = new System.Drawing.Point(429, 66);
+            this.rdMaHang.Location = new System.Drawing.Point(316, 66);
             this.rdMaHang.Name = "rdMaHang";
             this.rdMaHang.Size = new System.Drawing.Size(94, 17);
             this.rdMaHang.TabIndex = 18;
+            this.rdMaHang.TabStop = true;
             this.rdMaHang.Text = "Theo mã hàng";
             this.rdMaHang.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdMaHang.UncheckedState.BorderThickness = 2;
@@ -329,25 +336,23 @@ namespace QLMuaBanLinhKien.Views
             // rdTenHang
             // 
             this.rdTenHang.AutoSize = true;
-            this.rdTenHang.Checked = true;
             this.rdTenHang.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdTenHang.CheckedState.BorderThickness = 0;
             this.rdTenHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdTenHang.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdTenHang.CheckedState.InnerOffset = -4;
             this.rdTenHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.rdTenHang.Location = new System.Drawing.Point(316, 66);
+            this.rdTenHang.Location = new System.Drawing.Point(416, 66);
             this.rdTenHang.Name = "rdTenHang";
             this.rdTenHang.Size = new System.Drawing.Size(95, 17);
             this.rdTenHang.TabIndex = 19;
-            this.rdTenHang.TabStop = true;
             this.rdTenHang.Text = "Theo tên hàng";
             this.rdTenHang.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdTenHang.UncheckedState.BorderThickness = 2;
             this.rdTenHang.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdTenHang.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
-            // QLThongTinHangView
+            // QLHangView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,9 +365,9 @@ namespace QLMuaBanLinhKien.Views
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.guna2GroupBox1);
-            this.Name = "QLThongTinHangView";
+            this.Name = "QLHangView";
             this.Size = new System.Drawing.Size(932, 447);
-            this.Load += new System.EventHandler(this.UC_QLTHongTinHang_Load);
+            this.Load += new System.EventHandler(this.QLThongTinHangView_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHang)).EndInit();
