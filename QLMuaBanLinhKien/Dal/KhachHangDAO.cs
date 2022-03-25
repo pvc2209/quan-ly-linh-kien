@@ -13,7 +13,7 @@ namespace QLMuaBanLinhKien.Dal
     {
         public DataTable LoadDanhSachKhachHang()
         {
-            using (SqlConnection conn = new SqlConnection(Configs.ConnectionString))
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
                 conn.Open();
 
@@ -21,7 +21,7 @@ namespace QLMuaBanLinhKien.Dal
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
 
                 DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable); // Lúc này câu query mới được thực thi để lấy dữ liệu về
+                adapter.Fill(dataTable);
 
                 return dataTable;
             }
@@ -29,7 +29,7 @@ namespace QLMuaBanLinhKien.Dal
 
         public bool ThemKhachHang(KhachHang khachHang)
         {
-            using (SqlConnection conn = new SqlConnection(Configs.ConnectionString))
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
                 conn.Open();
 
@@ -49,7 +49,7 @@ namespace QLMuaBanLinhKien.Dal
 
         public bool SuaKhachHang(KhachHang khachHang)
         {
-            using (SqlConnection conn = new SqlConnection(Configs.ConnectionString))
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
                 conn.Open();
 
@@ -70,7 +70,7 @@ namespace QLMuaBanLinhKien.Dal
 
         public bool XoaKhachHang(int ma)
         {
-            using (SqlConnection conn = new SqlConnection(Configs.ConnectionString))
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
                 conn.Open();
 
@@ -87,7 +87,7 @@ namespace QLMuaBanLinhKien.Dal
 
         public DataTable TimKiemKhachHang(string soDienThoai)
         {
-            using (SqlConnection conn = new SqlConnection(Configs.ConnectionString))
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
                 conn.Open();
 

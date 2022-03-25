@@ -13,7 +13,7 @@ namespace QLMuaBanLinhKien.Dal
         public TaiKhoan CheckLogin(string username, string password)
         {
             
-            using (SqlConnection conn = new SqlConnection(Configs.ConnectionString))
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
                 conn.Open();
                 string query = $"SELECT * FROM tai_khoan WHERE ten_tai_khoan = @ten_tai_khoan AND mat_khau = @mat_khau";

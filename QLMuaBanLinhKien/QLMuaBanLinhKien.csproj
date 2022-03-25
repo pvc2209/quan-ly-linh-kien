@@ -64,7 +64,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CuaHangLinhKienDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Dal\Configs.cs" />
+    <Compile Include="Dal\Config.cs" />
     <Compile Include="Dal\KhachHangDAO.cs" />
     <Compile Include="Dal\TaiKhoanDAO.cs" />
     <Compile Include="Model\KhachHang.cs" />
