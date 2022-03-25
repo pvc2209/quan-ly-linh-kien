@@ -1,7 +1,7 @@
 ﻿
 namespace QLMuaBanLinhKien.Views
 {
-    partial class UC_QLTaiKhoan
+    partial class QLTaiKhoanView
     {
         /// <summary> 
         /// Required designer variable.

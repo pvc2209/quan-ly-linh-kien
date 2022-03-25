@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLMuaBanLinhKien.Views
 {
-    public partial class UC_ThongKe : UserControl
+    public partial class ThongKeView : UserControl
     {
-        public UC_ThongKe()
+        public ThongKeView()
         {
             InitializeComponent();
         }

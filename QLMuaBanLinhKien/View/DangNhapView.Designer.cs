@@ -1,7 +1,7 @@
 ﻿
 namespace QLMuaBanLinhKien
 {
-    partial class Form1
+    partial class DangNhapView
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,10 @@ namespace QLMuaBanLinhKien
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.edtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.edtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btDangNhap = new System.Windows.Forms.Button();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,24 +56,25 @@ namespace QLMuaBanLinhKien
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu:";
             // 
-            // edtTaiKhoan
+            // txtTenTaiKhoan
             // 
-            this.edtTaiKhoan.Location = new System.Drawing.Point(154, 21);
-            this.edtTaiKhoan.Name = "edtTaiKhoan";
-            this.edtTaiKhoan.Size = new System.Drawing.Size(183, 20);
-            this.edtTaiKhoan.TabIndex = 2;
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(154, 21);
+            this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(183, 20);
+            this.txtTenTaiKhoan.TabIndex = 2;
             // 
-            // edtMatKhau
+            // txtMatKhau
             // 
-            this.edtMatKhau.Location = new System.Drawing.Point(154, 65);
-            this.edtMatKhau.Name = "edtMatKhau";
-            this.edtMatKhau.Size = new System.Drawing.Size(183, 20);
-            this.edtMatKhau.TabIndex = 3;
+            this.txtMatKhau.Location = new System.Drawing.Point(154, 65);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(183, 20);
+            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.edtMatKhau);
-            this.panel1.Controls.Add(this.edtTaiKhoan);
+            this.panel1.Controls.Add(this.txtMatKhau);
+            this.panel1.Controls.Add(this.txtTenTaiKhoan);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(47, 42);
@@ -81,24 +82,25 @@ namespace QLMuaBanLinhKien
             this.panel1.Size = new System.Drawing.Size(364, 115);
             this.panel1.TabIndex = 4;
             // 
-            // btDangNhap
+            // btnDangNhap
             // 
-            this.btDangNhap.Location = new System.Drawing.Point(201, 183);
-            this.btDangNhap.Name = "btDangNhap";
-            this.btDangNhap.Size = new System.Drawing.Size(74, 27);
-            this.btDangNhap.TabIndex = 5;
-            this.btDangNhap.Text = "Đăng nhập";
-            this.btDangNhap.UseVisualStyleBackColor = true;
-            this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
+            this.btnDangNhap.Location = new System.Drawing.Point(201, 183);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(74, 27);
+            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // Form1
+            // DangNhapView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 246);
-            this.Controls.Add(this.btDangNhap);
+            this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "DangNhapView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -110,10 +112,10 @@ namespace QLMuaBanLinhKien
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox edtTaiKhoan;
-        private System.Windows.Forms.TextBox edtMatKhau;
+        private System.Windows.Forms.TextBox txtTenTaiKhoan;
+        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btDangNhap;
+        private System.Windows.Forms.Button btnDangNhap;
     }
 }
 

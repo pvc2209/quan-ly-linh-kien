@@ -1,7 +1,7 @@
 ﻿
 namespace QLMuaBanLinhKien.Views
 {
-    partial class UC_QLTHongTinHang
+    partial class QLThongTinHangView
     {
         /// <summary> 
         /// Required designer variable.

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLMuaBanLinhKien.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,18 +11,27 @@ using System.Windows.Forms;
 
 namespace QLMuaBanLinhKien.Views
 {
-    public partial class MenuQuanLy : Form
+    public partial class QuanLyView : Form
     {
-        public MenuQuanLy()
+        private TaiKhoan _quanLy;
+        
+        private QLTaiKhoanView _qlTaiKhoanView = new QLTaiKhoanView();
+        private ThongKeView _thongKeView = new ThongKeView();
+
+        public QuanLyView(TaiKhoan taiKhoan)
         {
             InitializeComponent();
+
+            _quanLy = taiKhoan;
+
+            this.Text = $"Quản Lý: {_quanLy.HoTen} ({_quanLy.SoDienThoai})";
         }
 
         private void MenuQuanLy_Load(object sender, EventArgs e)
         {
-            UC_QLTaiKhoan uc = new UC_QLTaiKhoan();
-            addUseControl(uc);
+            addUseControl(_qlTaiKhoanView);
         }
+        
         private void addUseControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -29,16 +39,20 @@ namespace QLMuaBanLinhKien.Views
             panelContainer.Controls.Add(userControl);
             userControl.BringToFront();
         }
+        
         private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
-            UC_QLTaiKhoan uc = new UC_QLTaiKhoan();
-            addUseControl(uc);
+            addUseControl(_qlTaiKhoanView);
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
-            UC_ThongKe uc = new UC_ThongKe();
-            addUseControl(uc);
+            addUseControl(_thongKeView);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

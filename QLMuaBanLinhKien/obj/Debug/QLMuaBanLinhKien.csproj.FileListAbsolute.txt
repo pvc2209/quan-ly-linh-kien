@@ -59,3 +59,24 @@ C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLin
 C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CopyComplete
 C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.exe
 C:\Users\SIEU THI SO 4G\Desktop\QlCuaHang\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.pdb
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe.config
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.pdb
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\Guna.UI2.dll
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.AssemblyReference.cache
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.SuggestedBindingRedirects.cache
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Properties.Resources.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.GenerateResource.cache
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CoreCompileInputs.cache
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CopyComplete
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.exe
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.pdb
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.DangNhapView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QuanLyView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.NhanVienView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLKhachHangView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLBanHangView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLNhapHangView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLTaiKhoanView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLThongTinHangView.resources
+C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.ThongKeView.resources
