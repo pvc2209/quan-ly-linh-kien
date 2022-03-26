@@ -80,3 +80,23 @@ C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanL
 C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLTaiKhoanView.resources
 C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.ThongKeView.resources
 C:\Users\pvc\Desktop\DuAn\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLHangView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe.config
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.exe
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\QLMuaBanLinhKien.pdb
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\bin\Debug\Guna.UI2.dll
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.AssemblyReference.cache
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.DangNhapView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Properties.Resources.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.NhanVienView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QuanLyView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLBanHangView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLKhachHangView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLNhapHangView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLTaiKhoanView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.QLHangView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.Views.ThongKeView.resources
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.GenerateResource.cache
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CoreCompileInputs.cache
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.csproj.CopyComplete
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.exe
+C:\Users\SIEU THI SO 4G\Desktop\TongKet\quan-ly-linh-kien\QLMuaBanLinhKien\obj\Debug\QLMuaBanLinhKien.pdb

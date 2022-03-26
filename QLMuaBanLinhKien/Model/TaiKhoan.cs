@@ -21,6 +21,24 @@ namespace QLMuaBanLinhKien.Model
             this.DiaChi = diaChi;
             this.Email = email;
         }
+        public TaiKhoan( string tenTaiKhoan, string matKhau, string chucVu, string hoTen, string soDienThoai, string diaChi, string email)
+        {
+            this.TenTaiKhoan = tenTaiKhoan;
+            this.MatKhau = matKhau;
+            this.ChucVu = chucVu;
+            this.HoTen = hoTen;
+            this.SoDienThoai = soDienThoai;
+            this.DiaChi = diaChi;
+            this.Email = email;
+        }
+        public TaiKhoan(int maTaiKhoan)
+        {
+            this.MaTaiKhoan = maTaiKhoan;
+        }
+        public TaiKhoan(string tenTaiKhoan)
+        {
+            this.TenTaiKhoan = tenTaiKhoan;
+        }
 
         public int MaTaiKhoan { get; set; }
         public string TenTaiKhoan { get; set; }

@@ -57,6 +57,8 @@
     <Compile Include="Controller\QLHangController.cs" />
     <Compile Include="Controller\QLKhachHangController.cs" />
     <Compile Include="Controller\QLNhapHangController.cs" />
+    <Compile Include="Controller\QLTaiKhoanController.cs" />
+    <Compile Include="Controller\ThongKeController.cs" />
     <Compile Include="CuaHangLinhKienDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,6 +75,7 @@
     <Compile Include="Dal\KhachHangDAO.cs" />
     <Compile Include="Dal\PhieuNhapDAO.cs" />
     <Compile Include="Dal\TaiKhoanDAO.cs" />
+    <Compile Include="Dal\ThongKeDAO.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\ChiTietPhieuNhap.cs" />
     <Compile Include="Model\Hang.cs" />

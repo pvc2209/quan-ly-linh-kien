@@ -47,7 +47,7 @@ namespace QLMuaBanLinhKien.Views
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 48);
+            this.panel1.Size = new System.Drawing.Size(932, 48);
             this.panel1.TabIndex = 0;
             // 
             // btnDangXuat
@@ -62,7 +62,7 @@ namespace QLMuaBanLinhKien.Views
             this.btnDangXuat.FillColor = System.Drawing.Color.White;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
-            this.btnDangXuat.Location = new System.Drawing.Point(705, 3);
+            this.btnDangXuat.Location = new System.Drawing.Point(777, 3);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(92, 42);
             this.btnDangXuat.TabIndex = 2;
@@ -116,14 +116,14 @@ namespace QLMuaBanLinhKien.Views
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(0, 48);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(800, 402);
+            this.panelContainer.Size = new System.Drawing.Size(932, 433);
             this.panelContainer.TabIndex = 1;
             // 
             // QuanLyView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(932, 481);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
             this.Name = "QuanLyView";
