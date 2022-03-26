@@ -34,7 +34,7 @@ namespace QLMuaBanLinhKien.Dal
             {
                 conn.Open();
 
-                string query = "SELECT MONTH(ngay_tao) AS 'Tháng',Year(ngay_tao) AS 'Năm', SUM(gia_nhap*so_luong) AS 'Doanh thu' FROM chi_tiet_phieu_nhap, phieu_nhap Where Year(phieu_nhap.ngay_tao) = 2022 and phieu_nhap.ma_phieu_nhap = chi_tiet_phieu_nhap.ma_phieu_nhap GROUP BY MONTH(ngay_tao),Year(ngay_tao)";
+                string query = "SELECT MONTH(ngay_tao) AS 'Tháng',Year(ngay_tao) AS 'Năm', SUM(gia_nhap*so_luong) AS 'Doanh thu' FROM chi_tiet_phieu_nhap, phieu_nhap Where Year(phieu_nhap.ngay_tao) = @nam and phieu_nhap.ma_phieu_nhap = chi_tiet_phieu_nhap.ma_phieu_nhap GROUP BY MONTH(ngay_tao),Year(ngay_tao)";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@nam", int.Parse(nam));

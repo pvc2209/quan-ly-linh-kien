@@ -34,8 +34,6 @@ namespace QLMuaBanLinhKien.Views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.rdTenHang = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdMaHang = new Guna.UI2.WinForms.Guna2RadioButton();
             this.dgvTaiKhoan = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
@@ -62,46 +60,6 @@ namespace QLMuaBanLinhKien.Views
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rdTenHang
-            // 
-            this.rdTenHang.AutoSize = true;
-            this.rdTenHang.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdTenHang.CheckedState.BorderThickness = 0;
-            this.rdTenHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdTenHang.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdTenHang.CheckedState.InnerOffset = -4;
-            this.rdTenHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.rdTenHang.Location = new System.Drawing.Point(423, 67);
-            this.rdTenHang.Name = "rdTenHang";
-            this.rdTenHang.Size = new System.Drawing.Size(95, 17);
-            this.rdTenHang.TabIndex = 28;
-            this.rdTenHang.Text = "Theo tên hàng";
-            this.rdTenHang.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdTenHang.UncheckedState.BorderThickness = 2;
-            this.rdTenHang.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdTenHang.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rdMaHang
-            // 
-            this.rdMaHang.AutoSize = true;
-            this.rdMaHang.Checked = true;
-            this.rdMaHang.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdMaHang.CheckedState.BorderThickness = 0;
-            this.rdMaHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdMaHang.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdMaHang.CheckedState.InnerOffset = -4;
-            this.rdMaHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.rdMaHang.Location = new System.Drawing.Point(323, 67);
-            this.rdMaHang.Name = "rdMaHang";
-            this.rdMaHang.Size = new System.Drawing.Size(94, 17);
-            this.rdMaHang.TabIndex = 27;
-            this.rdMaHang.TabStop = true;
-            this.rdMaHang.Text = "Theo mã hàng";
-            this.rdMaHang.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdMaHang.UncheckedState.BorderThickness = 2;
-            this.rdMaHang.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdMaHang.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // dgvTaiKhoan
             // 
@@ -134,12 +92,12 @@ namespace QLMuaBanLinhKien.Views
             this.dgvTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTaiKhoan.EnableHeadersVisualStyles = false;
             this.dgvTaiKhoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTaiKhoan.Location = new System.Drawing.Point(323, 90);
+            this.dgvTaiKhoan.Location = new System.Drawing.Point(323, 80);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
             this.dgvTaiKhoan.ReadOnly = true;
             this.dgvTaiKhoan.RowHeadersVisible = false;
             this.dgvTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(572, 322);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(572, 332);
             this.dgvTaiKhoan.TabIndex = 26;
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -197,7 +155,7 @@ namespace QLMuaBanLinhKien.Views
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtTimKiem.PlaceholderText = "Nhập thông tin hàng cần tìm kiếm...";
+            this.txtTimKiem.PlaceholderText = "Nhập tên tài khoản cần tìm kiếm...";
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.Size = new System.Drawing.Size(484, 34);
             this.txtTimKiem.TabIndex = 24;
@@ -454,6 +412,7 @@ namespace QLMuaBanLinhKien.Views
             this.txtMaTaiKhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaTaiKhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaTaiKhoan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaTaiKhoan.Enabled = false;
             this.txtMaTaiKhoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaTaiKhoan.ForeColor = System.Drawing.Color.Black;
@@ -534,8 +493,6 @@ namespace QLMuaBanLinhKien.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.rdTenHang);
-            this.Controls.Add(this.rdMaHang);
             this.Controls.Add(this.dgvTaiKhoan);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
@@ -550,15 +507,12 @@ namespace QLMuaBanLinhKien.Views
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private Guna.UI2.WinForms.Guna2RadioButton rdTenHang;
-        private Guna.UI2.WinForms.Guna2RadioButton rdMaHang;
         private Guna.UI2.WinForms.Guna2DataGridView dgvTaiKhoan;
         private Guna.UI2.WinForms.Guna2Button btnTimKiem;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
