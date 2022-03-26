@@ -21,18 +21,18 @@ namespace QLMuaBanLinhKien
 
             _dangNhapController = new DangNhapController(this);
         }
+        
+        public void showMessage(string message)
+        {
+            MessageBox.Show(message);
+        }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string tenTaiKhoan = txtTenTaiKhoan.Text;
             string matKhau = txtMatKhau.Text;
-            
+
             _dangNhapController.DangNhap(tenTaiKhoan, matKhau);
-        }
-        
-        public void showMessage(string message)
-        {
-            MessageBox.Show(message);
         }
     }
 }

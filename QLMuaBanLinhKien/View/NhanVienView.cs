@@ -32,7 +32,7 @@ namespace QLMuaBanLinhKien.Views
         private void NhanVienView_Load(object sender, EventArgs e)
         {
             _qlKhachHangView = new QLKhachHangView();
-            _qlBanHangView = new QLBanHangView();
+            _qlBanHangView = new QLBanHangView(_nhanVien.MaTaiKhoan);
             _qlNhapHangView = new QLNhapHangView(_nhanVien.MaTaiKhoan);
             _qlThongTinHangView = new QLHangView();
 
@@ -67,6 +67,7 @@ namespace QLMuaBanLinhKien.Views
 
         private void btnQLThongTinHang_Click(object sender, EventArgs e)
         {
+            _qlThongTinHangView.LoadDanhSachHang();
             addUseControl(_qlThongTinHangView);
         }
 

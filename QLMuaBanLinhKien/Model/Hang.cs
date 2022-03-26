@@ -8,6 +8,8 @@ namespace QLMuaBanLinhKien.Model
 {
     public class Hang
     {
+        public Hang() { }
+        
         public Hang(string maHang, string tenHang, double giaBan, int soLuong)
         {
             this.MaHang = maHang;

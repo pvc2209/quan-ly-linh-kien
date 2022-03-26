@@ -16,6 +16,7 @@ namespace QLMuaBanLinhKien.Views
     {
         private int _maNhanVien;
         private QLNhapHangController _qlNhapHangController;
+        
         public QLNhapHangView(int maNhanVien)
         {
             InitializeComponent();
@@ -28,6 +29,8 @@ namespace QLMuaBanLinhKien.Views
         private void QLNhapHangView_Load(object sender, EventArgs e)
         {
             _qlNhapHangController.LoadDanhSachPhieuNhap();
+
+            dtpNgayTao.Value = DateTime.Now;
         }
 
         public void HienThiDanhSachPhieuNhap(DataTable dataTable)
@@ -35,7 +38,7 @@ namespace QLMuaBanLinhKien.Views
             dgvPhieuNhap.DataSource = dataTable;
         }
 
-        public void HienThiDanhSachChiTietPhieuNhap(DataTable dataTable)
+        public void HienThiDanhSachHangCuaPhieuNhap(DataTable dataTable)
         {
             dgvHang.DataSource = dataTable;
         }
@@ -46,7 +49,7 @@ namespace QLMuaBanLinhKien.Views
             dtpNgayTao.Value = (DateTime)dgvPhieuNhap.CurrentRow.Cells[1].Value;
             txtMaNhanVien.Text = dgvPhieuNhap.CurrentRow.Cells[2].Value.ToString();
 
-            _qlNhapHangController.LoadDanhSachChiTietPhieuNhap(txtMaPhieuNhap.Text);
+            _qlNhapHangController.LoadDanhSachHangCuaPhieuNhap(txtMaPhieuNhap.Text);
         }
 
         private void btnTao_Click(object sender, EventArgs e)
@@ -68,7 +71,35 @@ namespace QLMuaBanLinhKien.Views
             string soLuong = txtSoLuong.Text;
             string giaNhap = txtGiaNhap.Text;
 
-            _qlNhapHangController.ThemChiTietPhieuNhap(maPhieuNhap, maHang, soLuong, giaNhap);
+            _qlNhapHangController.ThemHangVaoPhieuNhap(maPhieuNhap, maHang, soLuong, giaNhap);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string maPhieuNhap = txtMaPhieuNhap.Text;
+            _qlNhapHangController.XoaPhieuNhap(maPhieuNhap);
+        }
+
+        private void btnXoaHang_Click(object sender, EventArgs e)
+        {
+            string maPhieuNhap = txtMaPhieuNhap.Text;
+            string maHang = txtMaHang.Text;
+            string soLuong = txtSoLuong.Text;
+
+            _qlNhapHangController.XoaHangKhoiPhieuNhap(maPhieuNhap, maHang, soLuong);
+        }
+
+        private void dgvHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaHang.Text = dgvHang.CurrentRow.Cells[0].Value.ToString();
+            txtSoLuong.Text = dgvHang.CurrentRow.Cells[3].Value.ToString();
+            txtGiaNhap.Text = dgvHang.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string maPhieuNhap = txtTimKiem.Text;
+            _qlNhapHangController.TimKiemPhieuNhapTheoMa(maPhieuNhap);
         }
     }
 }

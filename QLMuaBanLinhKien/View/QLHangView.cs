@@ -24,6 +24,11 @@ namespace QLMuaBanLinhKien.Views
 
         private void QLThongTinHangView_Load(object sender, EventArgs e)
         {
+            LoadDanhSachHang();
+        }
+        
+        public void LoadDanhSachHang()
+        {
             _qlHangController.LoadDanhSachHang();
         }
 

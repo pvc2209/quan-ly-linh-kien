@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\DangNhapController.cs" />
+    <Compile Include="Controller\QLBanHangController.cs" />
     <Compile Include="Controller\QLHangController.cs" />
     <Compile Include="Controller\QLKhachHangController.cs" />
     <Compile Include="Controller\QLNhapHangController.cs" />
@@ -68,11 +69,14 @@
     </Compile>
     <Compile Include="Dal\Config.cs" />
     <Compile Include="Dal\HangDAO.cs" />
+    <Compile Include="Dal\HoaDonDAO.cs" />
     <Compile Include="Dal\KhachHangDAO.cs" />
     <Compile Include="Dal\PhieuNhapDAO.cs" />
     <Compile Include="Dal\TaiKhoanDAO.cs" />
+    <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\ChiTietPhieuNhap.cs" />
     <Compile Include="Model\Hang.cs" />
+    <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\PhieuNhap.cs" />
     <Compile Include="Model\TaiKhoan.cs" />

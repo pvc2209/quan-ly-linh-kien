@@ -115,5 +115,67 @@ namespace QLMuaBanLinhKien.Dal
                 return dataTable;
             }
         }
+
+        public bool TangSoLuongHang(string maHang, int soLuong)
+        {
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
+            {
+                conn.Open();
+
+                string query = "UPDATE hang SET so_luong = so_luong + @so_luong WHERE ma_hang = @ma_hang";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@ma_hang", maHang);
+                cmd.Parameters.AddWithValue("@so_luong", soLuong);
+
+                int result = cmd.ExecuteNonQuery();
+
+                return result > 0;
+            }
+        }
+
+        public bool GiamSoLuongHang(string maHang, int soLuong)
+        {
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
+            {
+                conn.Open();
+
+                string query = "UPDATE hang SET so_luong = so_luong - @so_luong WHERE ma_hang = @ma_hang AND so_luong - @so_luong >= 0";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@ma_hang", maHang);
+                cmd.Parameters.AddWithValue("@so_luong", soLuong);
+
+                int result = cmd.ExecuteNonQuery();
+
+                return result > 0;
+            }
+        }
+
+        public Hang TimHangTheoMaHang(string maHang)
+        {
+            using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT * FROM hang WHERE ma_hang = @ma_hang";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ma_hang", maHang);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                
+                Hang hang = null;
+                if (reader.Read())
+                {
+                    hang = new Hang();
+                    hang.MaHang = reader["ma_hang"].ToString();
+                    hang.TenHang = reader["ten_hang"].ToString();
+                    hang.GiaBan = int.Parse(reader["gia_ban"].ToString());
+                    hang.SoLuong = int.Parse(reader["so_luong"].ToString());
+                }
+
+                return hang;
+            }
+        }
     }
 }

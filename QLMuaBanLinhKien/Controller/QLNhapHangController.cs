@@ -28,7 +28,7 @@ namespace QLMuaBanLinhKien.Controller
             _view.HienThiDanhSachPhieuNhap(dataTable);
         }
         
-        public void LoadDanhSachChiTietPhieuNhap(string maPhieuNhap)
+        public void LoadDanhSachHangCuaPhieuNhap(string maPhieuNhap)
         {
             PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
 
@@ -36,7 +36,7 @@ namespace QLMuaBanLinhKien.Controller
 
             DataTable dataTable = phieuNhapDAO.LoadDanhSachChiTietPhieuNhap(ma);
 
-            _view.HienThiDanhSachChiTietPhieuNhap(dataTable);
+            _view.HienThiDanhSachHangCuaPhieuNhap(dataTable);
         }
 
         public void TaoPhieuNhap(string ngayTao, int maNhanVien)
@@ -52,11 +52,39 @@ namespace QLMuaBanLinhKien.Controller
             }
             else
             {
-                _view.ThongBao("Tạo phiếu nhập thất bại");
+                _view.ThongBao("Mã khách hàng không tồn tại");
             }
         }
 
-        public void ThemChiTietPhieuNhap(string maPhieuNhap, string maHang, string soLuong, string giaNhap)
+        public void XoaPhieuNhap(string maPhieuNhap)
+        {
+            
+            try
+            {
+                int ma = int.Parse(maPhieuNhap);
+
+                PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
+
+                bool result = phieuNhapDAO.XoaPhieuNhap(ma);
+
+                if (result)
+                {
+                    LoadDanhSachPhieuNhap();
+                    _view.ThongBao("Xóa phiếu nhập thành công");
+                }
+                else
+                {
+                    _view.ThongBao("Xóa phiếu nhập thất bại");
+                }
+            }
+            catch (FormatException)
+            {
+                _view.ThongBao("Mã phiếu nhập không hợp lệ");
+            }
+
+        }
+
+        public void ThemHangVaoPhieuNhap(string maPhieuNhap, string maHang, string soLuong, string giaNhap)
         {
             try
             {
@@ -71,22 +99,71 @@ namespace QLMuaBanLinhKien.Controller
 
                 if (result)
                 {
-                    LoadDanhSachChiTietPhieuNhap(maPhieuNhap);
-
-                    // TODO: Tăng số lượng của món hàng đó lên
+                    HangDAO hangDAO = new HangDAO();
+                    
+                    hangDAO.TangSoLuongHang(maHang, sl);
+                    
+                    LoadDanhSachHangCuaPhieuNhap(maPhieuNhap);
 
                     _view.ThongBao("Thêm hàng vào phiếu nhập thành công");
                 }
                 else
                 {
-                    _view.ThongBao("Mặt hàng không tồn tại");
+                    _view.ThongBao("Mặt hàng không tồn tại hoặc đã có trong phiếu nhập");
                 }
             }
             catch (FormatException)
             {
-                _view.ThongBao("Thông tin không hợp lệ");
+                _view.ThongBao("Thông tin hàng không hợp lệ");
                 return;
             }
+        }
+
+        public void XoaHangKhoiPhieuNhap(string maPhieuNhap, string maHang, string soLuong)
+        {
+            try
+            {
+                int maPN = int.Parse(maPhieuNhap);
+                int sl = int.Parse(soLuong);
+
+                HangDAO hangDAO = new HangDAO();
+                bool result = hangDAO.GiamSoLuongHang(maHang, sl);
+
+                if (result)
+                {
+
+                    PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
+                    bool result2 = phieuNhapDAO.XoaChiTietPhieuNhap(maPN, maHang);
+
+                    if (result2)
+                    {
+                        LoadDanhSachHangCuaPhieuNhap(maPhieuNhap);
+                        _view.ThongBao("Xóa hàng khỏi phiếu nhập thành công");
+                    }
+                    else
+                    {
+                        _view.ThongBao("Xóa hàng khỏi phiếu nhập thất bại");
+                    }
+                } 
+                else
+                {
+                    _view.ThongBao("Số lượng hàng không đủ để xóa");
+                }
+            }
+            catch (FormatException)
+            {
+                _view.ThongBao("Thông tin hàng không hợp lệ");
+                return;
+            }
+        }
+
+        public void TimKiemPhieuNhapTheoMa(string maPhieuNhap)
+        {
+            PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
+
+            DataTable dataTable = phieuNhapDAO.TimKiemPhieuNhapTheoMa(maPhieuNhap);
+
+            _view.HienThiDanhSachPhieuNhap(dataTable);
         }
     }
 }
