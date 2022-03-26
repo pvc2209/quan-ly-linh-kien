@@ -29,57 +29,185 @@ namespace QLMuaBanLinhKien.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnThongKeDoanhThuThang = new System.Windows.Forms.Button();
-            this.btnTongTienHangNhapTheoThang = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.cbbNam = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dgvThongKe = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2GroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnThongKeDoanhThuThang
+            // btnThem
             // 
-            this.btnThongKeDoanhThuThang.Location = new System.Drawing.Point(23, 17);
-            this.btnThongKeDoanhThuThang.Name = "btnThongKeDoanhThuThang";
-            this.btnThongKeDoanhThuThang.Size = new System.Drawing.Size(193, 23);
-            this.btnThongKeDoanhThuThang.TabIndex = 0;
-            this.btnThongKeDoanhThuThang.Text = "Thống kê doanh thu theo tháng";
-            this.btnThongKeDoanhThuThang.UseVisualStyleBackColor = true;
+            this.btnThem.BorderRadius = 8;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(39, 246);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(149, 45);
+            this.btnThem.TabIndex = 19;
+            this.btnThem.Text = "Thống kê doanh thu theo tháng";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnTongTienHangNhapTheoThang
+            // guna2Button1
             // 
-            this.btnTongTienHangNhapTheoThang.Location = new System.Drawing.Point(222, 17);
-            this.btnTongTienHangNhapTheoThang.Name = "btnTongTienHangNhapTheoThang";
-            this.btnTongTienHangNhapTheoThang.Size = new System.Drawing.Size(193, 23);
-            this.btnTongTienHangNhapTheoThang.TabIndex = 1;
-            this.btnTongTienHangNhapTheoThang.Text = "Tổng tiền hàng nhập theo tháng";
-            this.btnTongTienHangNhapTheoThang.UseVisualStyleBackColor = true;
+            this.guna2Button1.BorderRadius = 8;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(39, 174);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(149, 43);
+            this.guna2Button1.TabIndex = 20;
+            this.guna2Button1.Text = "Thống kê tổng tiền nhập theo tháng";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // dataGridView1
+            // cbbNam
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(715, 274);
-            this.dataGridView1.TabIndex = 2;
+            this.cbbNam.AutoRoundedCorners = true;
+            this.cbbNam.BackColor = System.Drawing.Color.Transparent;
+            this.cbbNam.BorderRadius = 17;
+            this.cbbNam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbNam.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbNam.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbNam.ForeColor = System.Drawing.Color.Black;
+            this.cbbNam.ItemHeight = 30;
+            this.cbbNam.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
+            this.cbbNam.Location = new System.Drawing.Point(78, 85);
+            this.cbbNam.Name = "cbbNam";
+            this.cbbNam.Size = new System.Drawing.Size(122, 36);
+            this.cbbNam.TabIndex = 21;
             // 
-            // UC_ThongKe
+            // guna2GroupBox4
+            // 
+            this.guna2GroupBox4.BorderRadius = 8;
+            this.guna2GroupBox4.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2GroupBox4.Controls.Add(this.btnThem);
+            this.guna2GroupBox4.Controls.Add(this.guna2Button1);
+            this.guna2GroupBox4.Controls.Add(this.cbbNam);
+            this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(225)))));
+            this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox4.ForeColor = System.Drawing.Color.White;
+            this.guna2GroupBox4.Location = new System.Drawing.Point(26, 33);
+            this.guna2GroupBox4.Name = "guna2GroupBox4";
+            this.guna2GroupBox4.Size = new System.Drawing.Size(222, 378);
+            this.guna2GroupBox4.TabIndex = 25;
+            this.guna2GroupBox4.Text = "Điều khiển";
+            // 
+            // dgvThongKe
+            // 
+            this.dgvThongKe.AllowUserToAddRows = false;
+            this.dgvThongKe.AllowUserToDeleteRows = false;
+            this.dgvThongKe.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvThongKe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongKe.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThongKe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvThongKe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvThongKe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongKe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvThongKe.ColumnHeadersHeight = 24;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThongKe.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvThongKe.EnableHeadersVisualStyles = false;
+            this.dgvThongKe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvThongKe.Location = new System.Drawing.Point(278, 33);
+            this.dgvThongKe.Name = "dgvThongKe";
+            this.dgvThongKe.ReadOnly = true;
+            this.dgvThongKe.RowHeadersVisible = false;
+            this.dgvThongKe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvThongKe.Size = new System.Drawing.Size(635, 378);
+            this.dgvThongKe.TabIndex = 26;
+            this.dgvThongKe.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvThongKe.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvThongKe.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvThongKe.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvThongKe.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvThongKe.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvThongKe.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvThongKe.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvThongKe.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvThongKe.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvThongKe.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvThongKe.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvThongKe.ThemeStyle.HeaderStyle.Height = 24;
+            this.dgvThongKe.ThemeStyle.ReadOnly = true;
+            this.dgvThongKe.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvThongKe.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvThongKe.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvThongKe.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvThongKe.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvThongKe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvThongKe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(10, 95);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(62, 17);
+            this.guna2HtmlLabel3.TabIndex = 22;
+            this.guna2HtmlLabel3.Text = "Chọn năm:";
+            // 
+            // ThongKeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnTongTienHangNhapTheoThang);
-            this.Controls.Add(this.btnThongKeDoanhThuThang);
-            this.Name = "UC_ThongKe";
-            this.Size = new System.Drawing.Size(800, 402);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.Controls.Add(this.dgvThongKe);
+            this.Controls.Add(this.guna2GroupBox4);
+            this.Name = "ThongKeView";
+            this.Size = new System.Drawing.Size(932, 433);
+            this.Load += new System.EventHandler(this.ThongKeView_Load);
+            this.guna2GroupBox4.ResumeLayout(false);
+            this.guna2GroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnThongKeDoanhThuThang;
-        private System.Windows.Forms.Button btnTongTienHangNhapTheoThang;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2Button btnThem;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbNam;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvThongKe;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }
