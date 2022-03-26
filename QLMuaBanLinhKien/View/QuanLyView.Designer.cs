@@ -62,7 +62,7 @@ namespace QLMuaBanLinhKien.Views
             this.btnDangXuat.FillColor = System.Drawing.Color.White;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
-            this.btnDangXuat.Location = new System.Drawing.Point(828, 3);
+            this.btnDangXuat.Location = new System.Drawing.Point(837, 3);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(92, 42);
             this.btnDangXuat.TabIndex = 2;

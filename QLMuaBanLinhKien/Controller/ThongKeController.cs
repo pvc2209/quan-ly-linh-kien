@@ -16,18 +16,19 @@ namespace QLMuaBanLinhKien.Controller
         {
             _view = view;
         }
-        public void tkTheoThang(string nam)
+        
+        public void ThongKeDoanhThuTheoThang(string nam)
         {
-            ThongKeDAO tk = new ThongKeDAO();
-            DataTable dataTable = tk.tkTheoThang(nam);
+            ThongKeDAO thongKeDAO = new ThongKeDAO();
+            DataTable dataTable = thongKeDAO.ThongKeDoanhThuTheoThang(nam);
 
             _view.HienThiThongKe(dataTable);
         }
 
-        internal void tkTongTienNhapTheoThang(string nam)
+        public void ThongKeTongTienNhapTheoThang(string nam)
         {
-            ThongKeDAO tk = new ThongKeDAO();
-            DataTable dataTable = tk.tkTongTienNhapTheoThang(nam);
+            ThongKeDAO thongKeDAO = new ThongKeDAO();
+            DataTable dataTable = thongKeDAO.ThongKeTongTienNhapTheoThang(nam);
 
             _view.HienThiThongKe(dataTable);
         }
