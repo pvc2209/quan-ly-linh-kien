@@ -42,8 +42,16 @@ namespace QLMuaBanLinhKien.Dal
                 // Khi thêm mới thông tin hàng thì số lượng luôn là 0
                 cmd.Parameters.AddWithValue("@SoLuong", 0);
 
-                int result = cmd.ExecuteNonQuery();
-                return result > 0;
+                try
+                {
+                    int result = cmd.ExecuteNonQuery();
+
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
         
