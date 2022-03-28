@@ -89,13 +89,13 @@ namespace QLMuaBanLinhKien.Controller
             try
             {
                 int maPN = int.Parse(maPhieuNhap);
-                int maH = int.Parse(maHang);
+                //int maH = int.Parse(maHang);
                 int sl = int.Parse(soLuong);
                 double giaN = double.Parse(giaNhap);
 
                 PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
 
-                bool result = phieuNhapDAO.ThemChiTietPhieuNhap(new ChiTietPhieuNhap(maPN, maH, sl, giaN));
+                bool result = phieuNhapDAO.ThemChiTietPhieuNhap(new ChiTietPhieuNhap(maPN, maHang, sl, giaN));
 
                 if (result)
                 {

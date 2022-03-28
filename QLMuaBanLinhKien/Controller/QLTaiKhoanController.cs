@@ -110,10 +110,19 @@ namespace QLMuaBanLinhKien.Controller
                 _view.ThongBao("Xóa hàng thất bại!");
             }
         }
+        public bool IsNumber(string pValue)
+        {
+            foreach (Char c in pValue)
+            {
+                if (!Char.IsDigit(c))
+                    return false;
+            }
+            return true;
+        }
 
         private bool CheckValid(string tenTaiKhoan, string matKhau,string soDienThoai)
         {
-            if (soDienThoai.Length !=10)
+            if (soDienThoai.Length !=10 || IsNumber(soDienThoai)==false)
             {
                 _view.ThongBao("Số điện thoại không hợp lệ");
                 return false;
