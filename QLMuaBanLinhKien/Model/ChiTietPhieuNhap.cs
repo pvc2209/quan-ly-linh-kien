@@ -8,7 +8,7 @@ namespace QLMuaBanLinhKien.Model
 {
     public class ChiTietPhieuNhap
     {
-        public ChiTietPhieuNhap(int maPhieuNhap, int maHang, int soLuong, double giaNhap)
+        public ChiTietPhieuNhap(int maPhieuNhap, string maHang, int soLuong, double giaNhap)
         {
             this.MaPhieuNhap = maPhieuNhap;
             this.MaHang = maHang;
@@ -17,7 +17,7 @@ namespace QLMuaBanLinhKien.Model
         }
         
         public int MaPhieuNhap { get; set; }
-        public int MaHang { get; set; }
+        public string MaHang { get; set; }
         public int SoLuong { get; set; }
         public double GiaNhap { get; set; }
     }
