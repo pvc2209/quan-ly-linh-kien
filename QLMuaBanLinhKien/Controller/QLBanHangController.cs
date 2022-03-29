@@ -56,7 +56,7 @@ namespace QLMuaBanLinhKien.Controller
                 {
                     _view.ThongBao("Tạo hóa đơn thất bại");
                 }
-            } 
+            }
             catch (FormatException)
             {
                 _view.ThongBao("Mã khách hàng không hợp lệ");
@@ -97,7 +97,7 @@ namespace QLMuaBanLinhKien.Controller
                 }
                 else
                 {
-                    _view.ThongBao("Số lượng hàng không đủ");
+                    _view.ThongBao("Hàng không tồn tại hoặc số lượng hàng không đủ");
                 }
                 
             }

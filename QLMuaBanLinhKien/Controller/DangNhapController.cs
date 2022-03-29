@@ -20,37 +20,56 @@ namespace QLMuaBanLinhKien.Controller
 
         public void DangNhap(string tenTaiKhoan, string matKhau)
         {
-            TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
-
-            TaiKhoan taiKhoan = taiKhoanDAO.CheckLogin(tenTaiKhoan, matKhau);
-
-            if (taiKhoan != null)
+            if (CheckValid(tenTaiKhoan, matKhau))
             {
-                string chucVu = taiKhoan.ChucVu;
-                
-                if (chucVu.Equals("Quản Lý"))
-                {
-                    QuanLyView quanLyView = new QuanLyView(taiKhoan);
-                    
-                    _view.Hide();
-                    
-                    quanLyView.Closed += (sender, e) => _view.Show();
-                    quanLyView.Show();
-                }
-                else if (chucVu.Equals("Nhân Viên"))
-                {
-                    NhanVienView nhanVienView = new NhanVienView(taiKhoan);
+                TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
 
-                    _view.Hide();
-                    
-                    nhanVienView.Closed += (sender, e) => _view.Show();
-                    nhanVienView.Show();
+                TaiKhoan taiKhoan = taiKhoanDAO.CheckLogin(tenTaiKhoan, matKhau);
+
+                if (taiKhoan != null)
+                {
+                    string chucVu = taiKhoan.ChucVu;
+
+                    if (chucVu.Equals("Quản Lý"))
+                    {
+                        QuanLyView quanLyView = new QuanLyView(taiKhoan);
+
+                        _view.Hide();
+
+                        quanLyView.Closed += (sender, e) => _view.Show();
+                        quanLyView.Show();
+                    }
+                    else if (chucVu.Equals("Nhân Viên"))
+                    {
+                        NhanVienView nhanVienView = new NhanVienView(taiKhoan);
+
+                        _view.Hide();
+
+                        nhanVienView.Closed += (sender, e) => _view.Show();
+                        nhanVienView.Show();
+                    }
+                }
+                else
+                {
+                    _view.showMessage("Tài khoản hoặc mật khẩu không hợp lệ!");
                 }
             }
-            else
+        }
+
+        public bool CheckValid(string tenTaiKhoan, string matKhau)
+        {
+            if (tenTaiKhoan.Equals(""))
             {
-                _view.showMessage("Đăng nhập thất bại");
+                _view.showMessage("Tên tài khoản không được để trống");
+                return false;
             }
+            else if (matKhau.Equals(""))
+            {
+                _view.showMessage("Mật khẩu không được để trống");
+                return false;
+            }
+
+            return true;
         }
     }
 }

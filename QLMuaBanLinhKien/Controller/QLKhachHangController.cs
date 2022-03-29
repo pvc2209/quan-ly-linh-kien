@@ -107,11 +107,14 @@ namespace QLMuaBanLinhKien.Controller
         
         public void TimKiemKhachHang(string soDienThoai)
         {
-            KhachHangDAO khachHangDAO = new KhachHangDAO();
+            if (CheckSDT(soDienThoai))
+            {
+                KhachHangDAO khachHangDAO = new KhachHangDAO();
 
-            DataTable dataTable = khachHangDAO.TimKiemKhachHang(soDienThoai);
+                DataTable dataTable = khachHangDAO.TimKiemKhachHang(soDienThoai);
 
-            _view.HienThiDanhSachKhachHang(dataTable);
+                _view.HienThiDanhSachKhachHang(dataTable);
+            }
         }
 
         private bool CheckValid(string hoTen, string diaChi, string soDienThoai, string email)
@@ -155,6 +158,16 @@ namespace QLMuaBanLinhKien.Controller
                 }
             }
 
+            return true;
+        }
+        
+        private bool CheckSDT(string soDienThoai)
+        {
+            if (soDienThoai.Length != 10)
+            {
+                _view.ThongBao("Số điện thoại phải có 10 số");
+                return false;
+            }
             return true;
         }
     }
