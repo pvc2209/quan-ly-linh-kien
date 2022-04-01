@@ -49,20 +49,21 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
-
-                string query = "INSERT INTO hoa_don(ngay_tao, ma_nhan_vien, ma_khach_hang, thanh_tien) VALUES(@ngayTao, @maNhanVien, @maKhachHang, @thanhTien)";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@ngayTao", hoaDon.NgayTao);
-                command.Parameters.AddWithValue("@maNhanVien", hoaDon.MaNV);
-                command.Parameters.AddWithValue("@maKhachHang", hoaDon.MaKH);
-                
-                // Khi tạo hóa đơn thì lúc đó chưa có món hàng nào trong hóa đơn
-                // nên thanhTien = 0
-                command.Parameters.AddWithValue("@thanhTien", 0);
-
                 try
                 {
+                    conn.Open();
+
+                    string query = "INSERT INTO hoa_don(ngay_tao, ma_nhan_vien, ma_khach_hang, thanh_tien) VALUES(@ngayTao, @maNhanVien, @maKhachHang, @thanhTien)";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.Parameters.AddWithValue("@ngayTao", hoaDon.NgayTao);
+                    command.Parameters.AddWithValue("@maNhanVien", hoaDon.MaNV);
+                    command.Parameters.AddWithValue("@maKhachHang", hoaDon.MaKH);
+                
+                    // Khi tạo hóa đơn thì lúc đó chưa có món hàng nào trong hóa đơn
+                    // nên thanhTien = 0
+                    command.Parameters.AddWithValue("@thanhTien", 0);
+
+                
                     int result = command.ExecuteNonQuery();
                     return result > 0;
                 }
@@ -79,17 +80,17 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
-
-                string query = "INSERT INTO chi_tiet_hoa_don(ma_hoa_don, ma_hang, so_luong) VALUES(@ma_hoa_don, @ma_hang, @so_luong)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@ma_hoa_don", chiTietHoaDon.MaHD);
-                cmd.Parameters.AddWithValue("@ma_hang", chiTietHoaDon.MaHang);
-                cmd.Parameters.AddWithValue("@so_luong", chiTietHoaDon.SoLuong);
-
                 try
                 {
+                    conn.Open();
+
+                    string query = "INSERT INTO chi_tiet_hoa_don(ma_hoa_don, ma_hang, so_luong) VALUES(@ma_hoa_don, @ma_hang, @so_luong)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@ma_hoa_don", chiTietHoaDon.MaHD);
+                    cmd.Parameters.AddWithValue("@ma_hang", chiTietHoaDon.MaHang);
+                    cmd.Parameters.AddWithValue("@so_luong", chiTietHoaDon.SoLuong);
+
                     int result = cmd.ExecuteNonQuery();
 
                     return result > 0;
@@ -108,17 +109,24 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "UPDATE hoa_don SET thanh_tien = thanh_tien + @gia_ban WHERE ma_hoa_don = @ma_hoa_don";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "UPDATE hoa_don SET thanh_tien = thanh_tien + @gia_ban WHERE ma_hoa_don = @ma_hoa_don";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@gia_ban", hang.GiaBan * chiTietHoaDon.SoLuong);
-                cmd.Parameters.AddWithValue("@ma_hoa_don", chiTietHoaDon.MaHD);
+                    cmd.Parameters.AddWithValue("@gia_ban", hang.GiaBan * chiTietHoaDon.SoLuong);
+                    cmd.Parameters.AddWithValue("@ma_hoa_don", chiTietHoaDon.MaHD);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch(Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -126,17 +134,24 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "UPDATE hoa_don SET thanh_tien = thanh_tien - @gia_ban WHERE ma_hoa_don = @ma_hoa_don";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "UPDATE hoa_don SET thanh_tien = thanh_tien - @gia_ban WHERE ma_hoa_don = @ma_hoa_don";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@gia_ban", hang.GiaBan * chiTietHoaDon.SoLuong);
-                cmd.Parameters.AddWithValue("@ma_hoa_don", chiTietHoaDon.MaHD);
+                    cmd.Parameters.AddWithValue("@gia_ban", hang.GiaBan * chiTietHoaDon.SoLuong);
+                    cmd.Parameters.AddWithValue("@ma_hoa_don", chiTietHoaDon.MaHD);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch(Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -144,17 +159,24 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "DELETE FROM chi_tiet_hoa_don WHERE ma_hoa_don = @ma_hoa_don AND ma_hang = @ma_hang";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "DELETE FROM chi_tiet_hoa_don WHERE ma_hoa_don = @ma_hoa_don AND ma_hang = @ma_hang";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@ma_hoa_don", maHoaDon);
-                cmd.Parameters.AddWithValue("@ma_hang", maHang);
+                    cmd.Parameters.AddWithValue("@ma_hoa_don", maHoaDon);
+                    cmd.Parameters.AddWithValue("@ma_hang", maHang);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -162,15 +184,15 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
-
-                string query = "DELETE FROM hoa_don WHERE ma_hoa_don = @ma_hoa_don";
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@ma_hoa_don", maHoaDon);
-
                 try
                 {
+                    conn.Open();
+
+                    string query = "DELETE FROM hoa_don WHERE ma_hoa_don = @ma_hoa_don";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@ma_hoa_don", maHoaDon);
+
                     int result = cmd.ExecuteNonQuery();
 
                     return result > 0;

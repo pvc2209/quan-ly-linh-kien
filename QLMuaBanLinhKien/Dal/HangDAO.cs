@@ -31,19 +31,20 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
-
-                string query = "INSERT INTO hang VALUES(@MaHang, @TenHang, @GiaBan, @SoLuong)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaHang", hang.MaHang);
-                cmd.Parameters.AddWithValue("@TenHang", hang.TenHang);
-                cmd.Parameters.AddWithValue("@GiaBan", hang.GiaBan);
-
-                // Khi thêm mới thông tin hàng thì số lượng luôn là 0
-                cmd.Parameters.AddWithValue("@SoLuong", 0);
-
                 try
                 {
+                    conn.Open();
+
+                    string query = "INSERT INTO hang VALUES(@MaHang, @TenHang, @GiaBan, @SoLuong)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@MaHang", hang.MaHang);
+                    cmd.Parameters.AddWithValue("@TenHang", hang.TenHang);
+                    cmd.Parameters.AddWithValue("@GiaBan", hang.GiaBan);
+
+                    // Khi thêm mới thông tin hàng thì số lượng luôn là 0
+                    cmd.Parameters.AddWithValue("@SoLuong", 0);
+
+                
                     int result = cmd.ExecuteNonQuery();
 
                     return result > 0;
@@ -59,17 +60,24 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "UPDATE hang SET ten_hang = @TenHang, gia_ban = @GiaBan, so_luong = @SoLuong WHERE ma_hang = @MaHang";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaHang", hang.MaHang);
-                cmd.Parameters.AddWithValue("@TenHang", hang.TenHang);
-                cmd.Parameters.AddWithValue("@GiaBan", hang.GiaBan);
-                cmd.Parameters.AddWithValue("@SoLuong", hang.SoLuong);
+                    string query = "UPDATE hang SET ten_hang = @TenHang, gia_ban = @GiaBan, so_luong = @SoLuong WHERE ma_hang = @MaHang";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@MaHang", hang.MaHang);
+                    cmd.Parameters.AddWithValue("@TenHang", hang.TenHang);
+                    cmd.Parameters.AddWithValue("@GiaBan", hang.GiaBan);
+                    cmd.Parameters.AddWithValue("@SoLuong", hang.SoLuong);
 
-                int result = cmd.ExecuteNonQuery();
-                return result > 0;
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -77,14 +85,21 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "DELETE FROM hang WHERE ma_hang = @MaHang";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaHang", maHang);
+                    string query = "DELETE FROM hang WHERE ma_hang = @MaHang";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@MaHang", maHang);
 
-                int result = cmd.ExecuteNonQuery();
-                return result > 0;
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
         
@@ -128,17 +143,24 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "UPDATE hang SET so_luong = so_luong + @so_luong WHERE ma_hang = @ma_hang";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "UPDATE hang SET so_luong = so_luong + @so_luong WHERE ma_hang = @ma_hang";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@ma_hang", maHang);
-                cmd.Parameters.AddWithValue("@so_luong", soLuong);
+                    cmd.Parameters.AddWithValue("@ma_hang", maHang);
+                    cmd.Parameters.AddWithValue("@so_luong", soLuong);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -146,17 +168,24 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "UPDATE hang SET so_luong = so_luong - @so_luong WHERE ma_hang = @ma_hang AND so_luong - @so_luong >= 0";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "UPDATE hang SET so_luong = so_luong - @so_luong WHERE ma_hang = @ma_hang AND so_luong - @so_luong >= 0";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@ma_hang", maHang);
-                cmd.Parameters.AddWithValue("@so_luong", soLuong);
+                    cmd.Parameters.AddWithValue("@ma_hang", maHang);
+                    cmd.Parameters.AddWithValue("@so_luong", soLuong);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -164,25 +193,32 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
-
-                string query = "SELECT * FROM hang WHERE ma_hang = @ma_hang";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ma_hang", maHang);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                
-                Hang hang = null;
-                if (reader.Read())
+                try
                 {
-                    hang = new Hang();
-                    hang.MaHang = reader["ma_hang"].ToString();
-                    hang.TenHang = reader["ten_hang"].ToString();
-                    hang.GiaBan = int.Parse(reader["gia_ban"].ToString());
-                    hang.SoLuong = int.Parse(reader["so_luong"].ToString());
-                }
+                    conn.Open();
 
-                return hang;
+                    string query = "SELECT * FROM hang WHERE ma_hang = @ma_hang";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@ma_hang", maHang);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    Hang hang = null;
+                    if (reader.Read())
+                    {
+                        hang = new Hang();
+                        hang.MaHang = reader["ma_hang"].ToString();
+                        hang.TenHang = reader["ten_hang"].ToString();
+                        hang.GiaBan = int.Parse(reader["gia_ban"].ToString());
+                        hang.SoLuong = int.Parse(reader["so_luong"].ToString());
+                    }
+
+                    return hang;
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
             }
         }
     }

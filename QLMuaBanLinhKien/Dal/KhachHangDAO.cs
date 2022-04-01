@@ -31,19 +31,26 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "INSERT INTO khach_hang(ho_ten, dia_chi, so_dien_thoai, email) VALUES(@ho_ten, @dia_chi, @so_dien_thoai, @email)";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "INSERT INTO khach_hang(ho_ten, dia_chi, so_dien_thoai, email) VALUES(@ho_ten, @dia_chi, @so_dien_thoai, @email)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@ho_ten", khachHang.HoTen);
-                cmd.Parameters.AddWithValue("@dia_chi", khachHang.DiaChi);
-                cmd.Parameters.AddWithValue("@so_dien_thoai", khachHang.SDT);
-                cmd.Parameters.AddWithValue("@email", khachHang.Email);
+                    cmd.Parameters.AddWithValue("@ho_ten", khachHang.HoTen);
+                    cmd.Parameters.AddWithValue("@dia_chi", khachHang.DiaChi);
+                    cmd.Parameters.AddWithValue("@so_dien_thoai", khachHang.SDT);
+                    cmd.Parameters.AddWithValue("@email", khachHang.Email);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -51,20 +58,27 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "UPDATE khach_hang SET ho_ten = @ho_ten, dia_chi = @dia_chi, so_dien_thoai = @so_dien_thoai, email = @email WHERE ma_khach_hang = @ma_khach_hang";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "UPDATE khach_hang SET ho_ten = @ho_ten, dia_chi = @dia_chi, so_dien_thoai = @so_dien_thoai, email = @email WHERE ma_khach_hang = @ma_khach_hang";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@ho_ten", khachHang.HoTen);
-                cmd.Parameters.AddWithValue("@dia_chi", khachHang.DiaChi);
-                cmd.Parameters.AddWithValue("@so_dien_thoai", khachHang.SDT);
-                cmd.Parameters.AddWithValue("@email", khachHang.Email);
-                cmd.Parameters.AddWithValue("@ma_khach_hang", khachHang.Ma);
+                    cmd.Parameters.AddWithValue("@ho_ten", khachHang.HoTen);
+                    cmd.Parameters.AddWithValue("@dia_chi", khachHang.DiaChi);
+                    cmd.Parameters.AddWithValue("@so_dien_thoai", khachHang.SDT);
+                    cmd.Parameters.AddWithValue("@email", khachHang.Email);
+                    cmd.Parameters.AddWithValue("@ma_khach_hang", khachHang.Ma);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -72,16 +86,23 @@ namespace QLMuaBanLinhKien.Dal
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                string query = "DELETE FROM khach_hang WHERE ma_khach_hang = @ma_khach_hang";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                    string query = "DELETE FROM khach_hang WHERE ma_khach_hang = @ma_khach_hang";
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@ma_khach_hang", ma);
+                    cmd.Parameters.AddWithValue("@ma_khach_hang", ma);
 
-                int result = cmd.ExecuteNonQuery();
+                    int result = cmd.ExecuteNonQuery();
 
-                return result > 0;
+                    return result > 0;
+                }
+                catch(Exception)
+                {
+                    return false;
+                }
             }
         }
 
