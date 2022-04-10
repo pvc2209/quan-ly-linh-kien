@@ -26,15 +26,15 @@ namespace QLMuaBanLinhKien.Controller
             _view.HienThiDanhSachTaiKhoan(dataTable);
         }
 
-        public void ThemTaiKhoan(string tenTaiKhoan,string matKhau,string chucVu,string soDienThoai,string diaChi,string Email,string hoTen)
+        public void ThemTaiKhoan(string tenTaiKhoan,string matKhau,string chucVu,string soDienThoai,string diaChi,string email,string hoTen)
         {
-            if (CheckValid(tenTaiKhoan,matKhau,soDienThoai))
+            if (CheckValid(tenTaiKhoan, matKhau, hoTen, soDienThoai, email))
             {
                 try
                 {
                     TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
 
-                    bool result = taiKhoanDAO.ThemTaiKhoan(new TaiKhoan(tenTaiKhoan, matKhau, chucVu, hoTen, soDienThoai, diaChi, Email));
+                    bool result = taiKhoanDAO.ThemTaiKhoan(new TaiKhoan(tenTaiKhoan, matKhau, chucVu, hoTen, soDienThoai, diaChi, email));
 
                     if (result)
                     {
@@ -54,16 +54,16 @@ namespace QLMuaBanLinhKien.Controller
             }
         }
 
-        public void SuaTaiKhoan(string maTaiKhoan,string tenTaiKhoan, string matKhau, string chucVu, string soDienThoai, string diaChi, string Email, string hoTen)
+        public void SuaTaiKhoan(string maTaiKhoan,string tenTaiKhoan, string matKhau, string chucVu, string soDienThoai, string diaChi, string email, string hoTen)
         {
-            if (CheckValid(tenTaiKhoan, matKhau, soDienThoai))
+            if (CheckValid(tenTaiKhoan, matKhau, hoTen, soDienThoai, email))
             {
                 try
                 {
                     int maTK = int.Parse(maTaiKhoan);
                     TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
 
-                    bool result = taiKhoanDAO.SuaTaiKhoan(new TaiKhoan(maTK,tenTaiKhoan, matKhau, chucVu, hoTen, soDienThoai, diaChi, Email));
+                    bool result = taiKhoanDAO.SuaTaiKhoan(new TaiKhoan(maTK,tenTaiKhoan, matKhau, chucVu, hoTen, soDienThoai, diaChi, email));
 
                     if (result)
                     {
@@ -121,16 +121,11 @@ namespace QLMuaBanLinhKien.Controller
             return true;
         }
 
-        private bool CheckValid(string tenTaiKhoan, string matKhau,string soDienThoai)
+        private bool CheckValid(string tenTaiKhoan, string matKhau, string hoTen, string soDienThoai, string email)
         {
-            if (soDienThoai.Length !=10 || IsNumber(soDienThoai) == false)
+            if (tenTaiKhoan.Length == 0 || CheckKyTuDacBiet(tenTaiKhoan) == false)
             {
-                _view.ThongBao("Số điện thoại không hợp lệ");
-                return false;
-            }
-            if (tenTaiKhoan.Length == 0)
-            {
-                _view.ThongBao("Tài khoản không được để trống");
+                _view.ThongBao("Tài khoản không hợp lệ");
                 return false;
             }
 
@@ -138,6 +133,58 @@ namespace QLMuaBanLinhKien.Controller
             {
                 _view.ThongBao("Mật khẩu không được để trống");
                 return false;
+            }
+
+            if (hoTen.Length == 0 || CheckKyTuDacBiet(hoTen) == false)
+            {
+                _view.ThongBao("Họ tên không hợp lệ");
+                return false;
+            }
+
+            if (soDienThoai.Length != 10 || IsNumber(soDienThoai) == false)
+            {
+                _view.ThongBao("Số điện thoại không hợp lệ");
+                return false;
+            }
+
+            if (email.Length == 0 || !email.Contains("@"))
+            {
+                _view.ThongBao("Email không hợp lệ");
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool CheckKyTuDacBiet(string text)
+        {
+            List<string> listKyTuDacBiet = new List<string>()
+            {
+                "!",
+                "@",
+                "#",
+                "%",
+                "^",
+                "&",
+                "*",
+                "(",
+                ")",
+                "_",
+                "+",
+                "-",
+                "=",
+                "[",
+                "]",
+                "{",
+                "}",
+            };
+
+            for (int i = 0; i < listKyTuDacBiet.Count; ++i)
+            {
+                if (text.Contains(listKyTuDacBiet[i]))
+                {
+                    return false;
+                }
             }
 
             return true;

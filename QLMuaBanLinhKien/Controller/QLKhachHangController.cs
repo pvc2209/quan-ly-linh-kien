@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace QLMuaBanLinhKien.Controller
@@ -119,6 +120,19 @@ namespace QLMuaBanLinhKien.Controller
 
         private bool CheckValid(string hoTen, string diaChi, string soDienThoai, string email)
         {
+            if (CheckKyTuDacBiet(hoTen) == false)
+            {
+                _view.ThongBao("Tên khách hàng không được chứa ký tự đặc biệt");
+                return false;
+            }
+
+            if (!CheckKyTuDacBiet(diaChi))
+            {
+                _view.ThongBao("Địa chỉ không được chứa ký tự đặc biệt");
+                return false;
+            }
+
+
             if (hoTen.Length == 0)
             {
                 _view.ThongBao("Tên khách hàng không được để trống");
@@ -131,9 +145,9 @@ namespace QLMuaBanLinhKien.Controller
                 return false;
             }
 
-            if (soDienThoai.Length == 0)
+            if (CheckSDT(soDienThoai) == false)
             {
-                _view.ThongBao("Số điện thoại không được để trống");
+                _view.ThongBao("Số điện thoại không hợp lệ");
                 return false;
             }
 
@@ -143,19 +157,11 @@ namespace QLMuaBanLinhKien.Controller
                 return false;
             }
 
-            if (soDienThoai.Length != 10)
+            
+            if (email.Length == 0 || !email.Contains("@"))
             {
-                _view.ThongBao("Số điện thoại phải có 10 số");
+                _view.ThongBao("Email không hợp lệ");
                 return false;
-            }
-
-            if (email.Length > 0)
-            {
-                if (!email.Contains("@"))
-                {
-                    _view.ThongBao("Email không hợp lệ");
-                    return false;
-                }
             }
 
             return true;
@@ -163,11 +169,54 @@ namespace QLMuaBanLinhKien.Controller
         
         private bool CheckSDT(string soDienThoai)
         {
-            if (soDienThoai.Length != 10)
+            if (soDienThoai.Length != 10 || IsNumber(soDienThoai) == false)
             {
-                _view.ThongBao("Số điện thoại phải có 10 số");
                 return false;
             }
+            return true;
+        }
+
+        public bool IsNumber(string pValue)
+        {
+            foreach (Char c in pValue)
+            {
+                if (!Char.IsDigit(c))
+                    return false;
+            }
+            return true;
+        }
+
+        private bool CheckKyTuDacBiet(string text)
+        {
+            List<string> listKyTuDacBiet = new List<string>()
+            {
+                "!",
+                "@",
+                "#",
+                "%",
+                "^",
+                "&",
+                "*",
+                "(",
+                ")",
+                "_",
+                "+",
+                "-",
+                "=",
+                "[",
+                "]",
+                "{",
+                "}",
+            };
+            
+            for (int i = 0; i < listKyTuDacBiet.Count; ++i)
+            {
+                if (text.Contains(listKyTuDacBiet[i]))
+                {
+                    return false;
+                }
+            }
+            
             return true;
         }
     }

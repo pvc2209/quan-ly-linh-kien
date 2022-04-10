@@ -128,7 +128,6 @@ namespace QLMuaBanLinhKien.Dal
             }
         }
 
-
         public bool XoaPhieuNhap(int maPhieuNhap)
         {
             using (SqlConnection conn = new SqlConnection(Config.ConnectionString))

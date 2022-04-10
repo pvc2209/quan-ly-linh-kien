@@ -119,10 +119,44 @@ namespace QLMuaBanLinhKien.Controller
                 return false;
             }
 
-            if (tenHang.Length == 0)
+            if (tenHang.Length == 0 || CheckKyTuDacBiet(tenHang) == false)
             {
-                _view.ThongBao("Tên hàng không được để trống");
+                _view.ThongBao("Tên hàng không hợp lệ");
                 return false;
+            }
+
+            return true;
+        }
+
+        private bool CheckKyTuDacBiet(string text)
+        {
+            List<string> listKyTuDacBiet = new List<string>()
+            {
+                "!",
+                "@",
+                "#",
+                "%",
+                "^",
+                "&",
+                "*",
+                "(",
+                ")",
+                "_",
+                "+",
+                "-",
+                "=",
+                "[",
+                "]",
+                "{",
+                "}",
+            };
+
+            for (int i = 0; i < listKyTuDacBiet.Count; ++i)
+            {
+                if (text.Contains(listKyTuDacBiet[i]))
+                {
+                    return false;
+                }
             }
 
             return true;
