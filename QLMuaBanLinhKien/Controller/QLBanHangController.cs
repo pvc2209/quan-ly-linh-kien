@@ -71,7 +71,6 @@ namespace QLMuaBanLinhKien.Controller
                 int maHD = int.Parse(maHoaDon);
                 int sl = int.Parse(soLuong);
 
-
                 HangDAO hangDAO = new HangDAO();
                 bool result = hangDAO.GiamSoLuongHang(maHang, sl);
 
@@ -103,7 +102,7 @@ namespace QLMuaBanLinhKien.Controller
             }
             catch (FormatException)
             {
-                _view.ThongBao("Mã hàng hoặc số lượng không hợp lệ");
+                _view.ThongBao("Định dạng không hợp lệ");
                 return;
             }
         }
@@ -120,7 +119,6 @@ namespace QLMuaBanLinhKien.Controller
 
                 if (result)
                 {
-
                     HoaDonDAO hoaDonDAO = new HoaDonDAO();
                     bool result2 = hoaDonDAO.XoaChiTietHoaDon(maHD, maHang);
 
@@ -138,11 +136,15 @@ namespace QLMuaBanLinhKien.Controller
                     {
                         _view.ThongBao("Xóa hàng khỏi hóa đơn thất bại");
                     }
+                } 
+                else
+                {
+                    _view.ThongBao("Hàng không tồn tại");
                 }
             }
             catch (FormatException)
             {
-                _view.ThongBao("Thông tin hàng không hợp lệ");
+                _view.ThongBao("Định dạng không hợp lệ");
                 return;
             }
         }
