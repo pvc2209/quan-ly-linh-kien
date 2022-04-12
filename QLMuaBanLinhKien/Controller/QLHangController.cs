@@ -149,6 +149,20 @@ namespace QLMuaBanLinhKien.Controller
                 "]",
                 "{",
                 "}",
+                "<",
+                ">",
+                "/",
+                "?",
+                ",",
+                ".",
+                ";",
+                ":",
+                "|",
+                "\\",
+                "\"",
+                "'",
+                "~",
+                "`",
             };
 
             for (int i = 0; i < listKyTuDacBiet.Count; ++i)

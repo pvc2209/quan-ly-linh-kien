@@ -92,28 +92,35 @@ namespace QLMuaBanLinhKien.Controller
                 int sl = int.Parse(soLuong);
                 double giaN = double.Parse(giaNhap);
 
-                PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
+                HangDAO hangDAO = new HangDAO();
 
-                bool result = phieuNhapDAO.ThemChiTietPhieuNhap(new ChiTietPhieuNhap(maPN, maHang, sl, giaN));
+                bool result = hangDAO.TangSoLuongHang(maHang, sl);
 
                 if (result)
                 {
-                    HangDAO hangDAO = new HangDAO();
-                    
-                    hangDAO.TangSoLuongHang(maHang, sl);
-                    
-                    LoadDanhSachHangCuaPhieuNhap(maPhieuNhap);
+                    PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
 
-                    _view.ThongBao("Thêm hàng vào phiếu nhập thành công");
+                    bool result2 = phieuNhapDAO.ThemChiTietPhieuNhap(new ChiTietPhieuNhap(maPN, maHang, sl, giaN));
+
+                    if (result2)
+                    {
+                        LoadDanhSachHangCuaPhieuNhap(maPhieuNhap);
+
+                        _view.ThongBao("Thêm hàng vào phiếu nhập thành công");
+                    }
+                    else
+                    {
+                        _view.ThongBao("Thêm hàng vào phiếu nhập thất bại hoặc đã có trong phiếu nhập");
+                    }
                 }
                 else
                 {
-                    _view.ThongBao("Mặt hàng không tồn tại hoặc đã có trong phiếu nhập");
+                    _view.ThongBao("Mặt hàng không tồn tại");
                 }
             }
             catch (FormatException)
             {
-                _view.ThongBao("Thông tin hàng không hợp lệ");
+                _view.ThongBao("Định dạng không hợp lệ");
                 return;
             }
         }
@@ -130,7 +137,6 @@ namespace QLMuaBanLinhKien.Controller
 
                 if (result)
                 {
-
                     PhieuNhapDAO phieuNhapDAO = new PhieuNhapDAO();
                     bool result2 = phieuNhapDAO.XoaChiTietPhieuNhap(maPN, maHang);
 
@@ -146,7 +152,7 @@ namespace QLMuaBanLinhKien.Controller
                 } 
                 else
                 {
-                    _view.ThongBao("Số lượng hàng không đủ để xóa");
+                    _view.ThongBao("Hàng không tồn tại hoặc số lượng hàng không đủ");
                 }
             }
             catch (FormatException)

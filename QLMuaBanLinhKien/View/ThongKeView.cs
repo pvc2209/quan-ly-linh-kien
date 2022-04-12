@@ -37,20 +37,14 @@ namespace QLMuaBanLinhKien.Views
         {
             string input = cbbNam.Text;
 
-            if (input != "")
-            {
-                controller.ThongKeTongTienNhapTheoThang(input);
-            }
+            controller.ThongKeTongTienNhapTheoThang(input);
         }
 
         private void btnThongKeDoanhThu_Click(object sender, EventArgs e)
         {
             string input = cbbNam.Text;
 
-            if (input != "")
-            {
-                controller.ThongKeDoanhThuTheoThang(input);
-            }
+            controller.ThongKeDoanhThuTheoThang(input);
         }
     }
 }
